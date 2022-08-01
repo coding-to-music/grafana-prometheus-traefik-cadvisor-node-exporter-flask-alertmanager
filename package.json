@@ -1,0 +1,21 @@
+{
+  "name": "grafana-prometheus-traefik-cadvisor-node-exporter-flask-alertmanager",
+  "version": "1.0.0",
+  "description": "This is a local stack that you can boot with docker-compose which will give you: Traefik, Grafana, Prometheus, cAdvisor, Node-Exporter, AlertManager, Python App instrumented with Prometheus",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "git add . && git commit -m Build && git push",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruanbekker/monitoring-grafana-prometheus-local.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ruanbekker/monitoring-grafana-prometheus-local/issues"
+  },
+  "homepage": "https://github.com/ruanbekker/monitoring-grafana-prometheus-local#readme"
+}

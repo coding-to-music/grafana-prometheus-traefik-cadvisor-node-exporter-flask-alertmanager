@@ -1,3 +1,31 @@
+# grafana-prometheus-traefik-cadvisor-node-exporter-flask-alertmanager
+
+# 🚀 Local DNS Stack: Grafana with Prometheus and Traefik using localdns 🚀
+
+https://github.com/coding-to-music/grafana-prometheus-traefik-cadvisor-node-exporter-flask-alertmanager
+
+From / By Ruan Bekker https://github.com/ruanbekker
+
+https://github.com/ruanbekker/monitoring-grafana-prometheus-local
+
+## Environment variables:
+
+```java
+
+```
+
+## GitHub
+
+```java
+git init
+git add .
+git remote remove origin
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:coding-to-music/grafana-prometheus-traefik-cadvisor-node-exporter-flask-alertmanager.git
+git push -u origin main
+```
+
 # monitoring-grafana-prometheus-local
 
 This is a local stack that you can boot with docker-compose which will give you: Traefik, Grafana, Prometheus, cAdvisor, Node-Exporter, AlertManager, Python App instrumented with Prometheus
@@ -51,6 +79,7 @@ For the web application you can access it on [flask-app.localdns.xyz](http://fla
 - `/metrics` view the metrics that is exporter for prometheus to scrape
 
 For more detailed alerting have a look at my [prometheus-alerting-alertmanager](https://github.com/ruanbekker/prometheus-alerting-alertmanager) repo:
+
 - [alertmanager.yml](https://github.com/ruanbekker/prometheus-alerting-alertmanager/blob/main/alertmanager/alertmanager.yml)
 - [host_alerts.rules](https://github.com/ruanbekker/prometheus-alerting-alertmanager/blob/main/prometheus-a/rules/host_alert.rules)
 
