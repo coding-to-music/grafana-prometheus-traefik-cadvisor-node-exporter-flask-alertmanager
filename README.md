@@ -26,6 +26,46 @@ git remote add origin git@github.com:coding-to-music/grafana-prometheus-traefik-
 git push -u origin main
 ```
 
+## Results:
+
+I don't see any output on the ports, not sure how to view the results
+
+http://localhost:3000
+
+```
+docker ps -a
+```
+
+Output:
+
+```
+CONTAINER ID   IMAGE                                                                            COMMAND                  CREATED         STATUS         PORTS                                       NAMES
+48824fa33689   grafana/grafana                                                                  "/run.sh"                7 minutes ago   Up 7 minutes   3000/tcp                                    grafana
+dc8797f2537d   grafana-prometheus-traefik-cadvisor-node-exporter-flask-alertmanager_flask-app   "python3 /src/app.py"    7 minutes ago   Up 7 minutes                                               flask-app
+2c038980d0eb   prom/alertmanager                                                                "/bin/alertmanager -…"   7 minutes ago   Up 7 minutes   9093/tcp                                    alertmanager
+8a1e4ad38b87   grafana/loki:2.0.0                                                               "/usr/bin/loki -conf…"   7 minutes ago   Up 7 minutes   0.0.0.0:3100->3100/tcp, :::3100->3100/tcp   loki
+a3de8772ff7c   prom/node-exporter                                                               "/bin/node_exporter …"   7 minutes ago   Up 7 minutes   9100/tcp                                    node-exporter
+a57acf0b80be   google/cadvisor                                                                  "/usr/bin/cadvisor -…"   7 minutes ago   Up 7 minutes   8080/tcp                                    cadvisor
+d37cb4462ea9   traefik:1.7.14                                                                   "/traefik --docker -…"   7 minutes ago   Up 7 minutes   0.0.0.0:80->80/tcp, :::80->80/tcp           traefik
+f7851498135e   prom/prometheus                                                                  "/bin/prometheus --c…"   7 minutes ago   Up 7 minutes   9090/tcp                                    prometheus
+```
+
+```
+docker-compose stop
+```
+
+Output:
+
+```
+Stopping grafana       ... done
+Stopping flask-app     ... done
+Stopping alertmanager  ... done
+Stopping loki          ... done
+Stopping node-exporter ... done
+Stopping cadvisor      ... done
+Stopping traefik       ... done
+```
+
 # monitoring-grafana-prometheus-local
 
 This is a local stack that you can boot with docker-compose which will give you: Traefik, Grafana, Prometheus, cAdvisor, Node-Exporter, AlertManager, Python App instrumented with Prometheus
